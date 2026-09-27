@@ -9,8 +9,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
-  :root { --text: #2B2622; --ink: #2B2622; --paper: #F6F1E7; --card: #FFFFFF; --gold: #E9B44C; --rust: #B5452E; --muted: #766B60; --line: #E6DDCC; --cream: #FFF8EC; --cream-muted: #CDBFA9; color-scheme: light; }
-  @media (prefers-color-scheme: dark) { :root { --text: #FFF8EC; --paper: #1C1916; --card: #26221E; --muted: #B3A792; --line: #3A342D; --rust: #E9B44C; color-scheme: dark; } }
+  :root { --text: #2B2622; --body: #2B2622; --ink: #2B2622; --paper: #F6F1E7; --card: #FFFFFF; --gold: #E9B44C; --rust: #B5452E; --muted: #766B60; --line: #E6DDCC; --cream: #FFF8EC; --cream-muted: #CDBFA9; color-scheme: light; }
+  @media (prefers-color-scheme: dark) { :root { --text: #FFF8EC; --body: #CDBFA9; --paper: #1C1916; --card: #26221E; --muted: #B3A792; --line: #3A342D; --rust: #E9B44C; color-scheme: dark; } }
   * { box-sizing: border-box; }
   body { margin: 0; background: var(--paper); color: var(--text); font: 17px/1.65 'DM Sans', system-ui, sans-serif; }
   header { background: var(--ink); color: var(--cream); }
@@ -27,7 +27,8 @@
   article + article { margin-top: 28px; }
   h1 { font: 800 clamp(30px, 5vw, 40px)/1.1 'Fraunces', serif; margin: 0 0 6px; text-wrap: balance; }
   h2 { font-size: 18px; margin: 28px 0 6px; }
-  p { margin: 0 0 8px; }
+  /* Headings in the text colour; running text one step softer in dark mode. */
+  p { margin: 0 0 8px; color: var(--body); }
   .motto { color: var(--rust); font-weight: 700; }
   .intro { font-weight: 500; font-size: 18px; margin-top: 14px; }
   .date { color: var(--muted); font-size: 14px; margin-top: 28px; }
