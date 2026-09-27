@@ -41,9 +41,9 @@
   .lang button { border: 0; background: none; color: var(--cream-muted); font: 700 13px 'DM Sans', sans-serif; padding: 6px 12px; border-radius: 999px; cursor: pointer; }
   .lang button[aria-pressed="true"] { background: var(--gold); color: var(--ink); }
 
-  .hero-grid { position: relative; display: grid; grid-template-columns: 1.1fr .9fr; gap: 48px; align-items: center; padding-block: 36px 80px; }
+  .hero-grid { position: relative; display: grid; grid-template-columns: 1.35fr .65fr; gap: 48px; align-items: center; padding-block: 36px 80px; }
   .kicker { color: var(--gold); font-weight: 700; letter-spacing: .08em; text-transform: uppercase; font-size: 13px; margin: 0 0 14px; }
-  h1 { font: 800 clamp(40px, 6vw, 64px)/1.02 'Fraunces', serif; margin: 0 0 20px; text-wrap: balance; }
+  h1 { font: 800 clamp(38px, 5.2vw, 56px)/1.04 'Fraunces', serif; margin: 0 0 20px; text-wrap: balance; }
   h1 em { font-style: normal; color: var(--gold); }
   .lede { font-size: 19px; color: var(--cream-muted); max-width: 32em; margin: 0 0 26px; }
   .promises { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; padding: 0; margin: 0 0 30px; }
@@ -78,9 +78,9 @@
   .intro { color: var(--muted); max-width: 36em; margin: 0 0 36px; }
   .features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
   .feature { background: var(--card); border-radius: 18px; padding: 22px; border: 1px solid var(--line); }
-  .feature .num { font: 800 34px/1 'Fraunces', serif; color: var(--rust); }
+  .feature .num { font: 800 1.9em/1 'Fraunces', serif; color: var(--rust); margin-right: 4px; }
   @media (prefers-color-scheme: dark) { .feature .num { color: var(--gold); } }
-  .feature h3 { margin: 10px 0 6px; font-size: 18px; }
+  .feature h3 { margin: 0 0 8px; font-size: 19px; line-height: 1.25; display: flex; align-items: baseline; flex-wrap: wrap; column-gap: 6px; }
   .feature p { margin: 0; color: var(--muted); font-size: 15.5px; }
 
   .privacy { background: var(--ink); color: var(--cream); border-radius: 28px; padding: 44px; display: grid; grid-template-columns: auto 1fr; gap: 28px; align-items: center; }
@@ -117,7 +117,7 @@
     <div class="hero-grid">
       <div>
         <p class="kicker" data-t="kicker">Carnet de scores pour jeux de société</p>
-        <h1 data-t="title">Jouez. <em>Podium</em> compte les points.</h1>
+        <h1 data-t="title">Vous jouez,<br><em>Podium</em> compte.</h1>
         <p class="lede" data-t="lede">Skyjo, Tarot, Belote, 7 Wonders… Saisissez chaque tour en quelques secondes, suivez qui mène et laissez Podium annoncer le vainqueur.</p>
         <ul class="promises">
           <li data-t="p1">Gratuit</li>
@@ -156,12 +156,12 @@
     <h2 data-t="featuresTitle">Tout ce qu'il faut autour de la table</h2>
     <p class="intro" data-t="featuresIntro">Pensé par des joueurs, pour des soirées où l'on veut jouer, pas faire des additions.</p>
     <div class="features">
-      <article class="feature"><div class="num">57</div><h3 data-t="f1t">jeux prêts à jouer</h3><p data-t="f1">Règles déjà réglées et fiche « comment compter les points » pour chaque jeu du catalogue.</p></article>
-      <article class="feature"><div class="num">3</div><h3 data-t="f2t">calculateurs de cartes</h3><p data-t="f2">Tarot, Belote et Coinche, variantes régionales comprises : saisissez la donne, Podium calcule.</p></article>
-      <article class="feature"><div class="num">2+</div><h3 data-t="f3t">en équipes aussi</h3><p data-t="f3">Composez les équipes, et le donneur tourne tout seul d'un tour à l'autre.</p></article>
-      <article class="feature"><div class="num">1</div><h3 data-t="f4t">tour en quelques secondes</h3><p data-t="f4">Raccourcis +1 / +5 / +10, dernier score déduit quand le total est fixe, fin de partie annoncée.</p></article>
-      <article class="feature"><div class="num">13</div><h3 data-t="f5t">thèmes</h3><p data-t="f5">Du tapis de cartes à l'espace, sans oublier un thème à contraste élevé.</p></article>
-      <article class="feature"><div class="num">8</div><h3 data-t="f6t">langues</h3><p data-t="f6">Français, anglais, allemand, espagnol, italien, néerlandais, polonais et portugais.</p></article>
+      <article class="feature"><h3><span class="num">57</span> <span data-t="f1t">jeux prêts à jouer</span></h3><p data-t="f1">Règles déjà réglées et fiche « comment compter les points » pour chaque jeu du catalogue.</p></article>
+      <article class="feature"><h3><span class="num">3</span> <span data-t="f2t">calculateurs de cartes</span></h3><p data-t="f2">Tarot, Belote et Coinche, variantes régionales comprises : saisissez la donne, Podium calcule.</p></article>
+      <article class="feature"><h3><span class="num">2+</span> <span data-t="f3t">en équipes aussi</span></h3><p data-t="f3">Composez les équipes, et le donneur tourne tout seul d'un tour à l'autre.</p></article>
+      <article class="feature"><h3><span class="num">1</span> <span data-t="f4t">tour en quelques secondes</span></h3><p data-t="f4">Raccourcis +1 / +5 / +10, dernier score déduit quand le total est fixe, fin de partie annoncée.</p></article>
+      <article class="feature"><h3><span class="num">13</span> <span data-t="f5t">thèmes</span></h3><p data-t="f5">Du tapis de cartes à l'espace, sans oublier un thème à contraste élevé.</p></article>
+      <article class="feature"><h3><span class="num">8</span> <span data-t="f6t">langues</span></h3><p data-t="f6">Français, anglais, allemand, espagnol, italien, néerlandais, polonais et portugais.</p></article>
     </div>
   </section>
 
@@ -186,7 +186,7 @@
   // The page is in French; English swaps the texts in place. The choice follows the browser, then the buttons.
   const EN = {
     kicker: 'Score sheet for board games',
-    title: 'Play. <em>Podium</em> keeps score.',
+    title: 'You play,<br><em>Podium</em> keeps score.',
     lede: 'Skyjo, French Tarot, Belote, 7 Wonders… Enter each round in seconds, see who leads, and let Podium call the winner.',
     p1: 'Free', p2: 'Ad-free', p3: 'No account', p4: 'Works offline',
     soon: 'Coming soon on', storeLabel: 'Coming soon on Google Play', privacyLink: 'Privacy policy',

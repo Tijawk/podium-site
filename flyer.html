@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Podium — flyer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,800&family=DM+Sans:wght@400;500;700&family=DM+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+  /* A5 portrait, printed edge to edge: print with margins set to none. */
+  @page { size: 148mm 210mm; margin: 0; }
+  :root { --ink: #2B2622; --paper: #F6F1E7; --gold: #E9B44C; --rust: #B5452E; --cream: #FFF8EC; --cream-muted: #CDBFA9; --muted: #766B60; }
+  * { box-sizing: border-box; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  html, body { margin: 0; background: #d9d2c5; }
+  .flyer { width: 148mm; height: 210mm; margin: 0 auto; background: var(--paper); color: var(--ink); font-family: 'DM Sans', sans-serif; display: flex; flex-direction: column; overflow: hidden; }
+  @media print { html, body { background: none; } }
+  .top { background: var(--ink); color: var(--cream); padding: 9mm 10mm 8mm; position: relative; }
+  .top::before { content: ''; position: absolute; inset: 0; opacity: .07; background-image: radial-gradient(circle, var(--cream) 1.3px, transparent 1.7px); background-size: 5mm 5mm; }
+  .brand { position: relative; display: flex; align-items: flex-end; gap: 2.5mm; font: 800 9mm/1 'Fraunces', serif; }
+  .bars { display: flex; align-items: flex-end; gap: .8mm; height: 8.5mm; }
+  .bars i { width: 2.8mm; border-radius: .5mm; background: var(--gold); }
+  .bars i:nth-child(1) { height: 5.2mm; } .bars i:nth-child(2) { height: 8.5mm; background: var(--cream); } .bars i:nth-child(3) { height: 3.6mm; opacity: .55; }
+  h1 { position: relative; font: 800 10.4mm/1.04 'Fraunces', serif; margin: 7mm 0 3.5mm; letter-spacing: -.1mm; }
+  h1 em { font-style: normal; color: var(--gold); }
+  .lede { position: relative; margin: 0; font-size: 4mm; line-height: 1.45; color: var(--cream-muted); }
+  .body { flex: 1; padding: 7mm 10mm 0; display: grid; grid-template-columns: 1fr 1fr; gap: 5mm 6mm; align-content: start; }
+  .point b { font: 800 7mm/1 'Fraunces', serif; color: var(--rust); margin-right: 1.5mm; }
+  .point span { font-weight: 700; font-size: 3.9mm; }
+  .point .head { display: flex; align-items: baseline; flex-wrap: wrap; }
+  .point small { display: block; color: var(--muted); font-size: 3.1mm; line-height: 1.35; margin-top: .8mm; }
+  .promises { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: 2mm; margin-top: 1mm; }
+  .promises span { border: .3mm solid var(--ink); border-radius: 10mm; padding: 1.2mm 3.2mm; font-weight: 700; font-size: 3.3mm; }
+  .promises span::before { content: '✓ '; color: var(--rust); }
+  .bottom { margin: 6mm 10mm 5mm; background: var(--ink); color: var(--cream); border-radius: 6mm; padding: 6mm; display: grid; grid-template-columns: 34mm 1fr; gap: 6mm; align-items: center; }
+  .qr { width: 34mm; height: 34mm; background: #fff; border-radius: 3mm; padding: 2mm; display: block; }
+  .scan { font: 800 6.2mm/1.1 'Fraunces', serif; margin: 0 0 2mm; }
+  .scan em { font-style: normal; color: var(--gold); }
+  .url { font-family: 'DM Mono', monospace; font-size: 3.1mm; color: var(--cream-muted); word-break: break-all; margin: 0 0 3mm; }
+  .soon { display: inline-block; background: var(--gold); color: var(--ink); border-radius: 3mm; padding: 1.6mm 3.4mm; font-weight: 700; font-size: 3.3mm; }
+  .motto { text-align: center; font: 800 4.6mm 'Fraunces', serif; color: var(--rust); margin: 0 0 6mm; }
+</style>
+</head>
+<body>
+<div class="flyer">
+  <div class="top">
+    <div class="brand"><span class="bars" aria-hidden="true"><i></i><i></i><i></i></span>Podium</div>
+    <h1>Vous jouez,<br><em>Podium</em> compte.</h1>
+    <p class="lede">Le carnet de scores de vos soirées jeux : saisissez chaque tour en quelques secondes, Podium annonce le vainqueur.</p>
+  </div>
+  <div class="body">
+    <div class="point"><div class="head"><b>57</b><span>jeux prêts à jouer</span></div><small>Skyjo, 7 Wonders, Uno, Azul… avec leur fiche de comptage.</small></div>
+    <div class="point"><div class="head"><b>3</b><span>calculateurs de cartes</span></div><small>Tarot, Belote et Coinche : saisissez la donne, Podium calcule.</small></div>
+    <div class="point"><div class="head"><b>2+</b><span>en équipes aussi</span></div><small>Et le donneur tourne tout seul d'un tour à l'autre.</small></div>
+    <div class="point"><div class="head"><b>13</b><span>thèmes, 8 langues</span></div><small>Du tapis de cartes à l'espace, et un thème à contraste élevé.</small></div>
+    <div class="promises"><span>Gratuit</span><span>Sans pub</span><span>Sans compte</span><span>Hors ligne</span></div>
+  </div>
+  <div class="bottom">
+    <svg class="qr" role="img" aria-label="QR code : tijawk.github.io/podium-site" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 31 31" shape-rendering="crispEdges"><path fill="#FFFFFF" d="M0 0h31v31H0z"/><path stroke="#2B2622" d="M1 1.5h7m1 0h2m3 0h1m3 0h4m1 0h7M1 2.5h1m5 0h1m1 0h2m1 0h3m2 0h2m2 0h1m1 0h1m5 0h1M1 3.5h1m1 0h3m1 0h1m2 0h3m1 0h2m3 0h1m1 0h1m1 0h1m1 0h3m1 0h1M1 4.5h1m1 0h3m1 0h1m1 0h1m2 0h1m3 0h1m1 0h1m1 0h1m2 0h1m1 0h3m1 0h1M1 5.5h1m1 0h3m1 0h1m2 0h1m1 0h6m2 0h2m1 0h1m1 0h3m1 0h1M1 6.5h1m5 0h1m4 0h2m1 0h1m1 0h4m2 0h1m5 0h1M1 7.5h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7M9 8.5h4m1 0h2m1 0h5M1 9.5h1m1 0h2m1 0h3m5 0h2m2 0h1m1 0h1m2 0h1m2 0h1m1 0h2M1 10.5h1m2 0h1m3 0h1m1 0h2m5 0h5m1 0h3m3 0h1M2 11.5h8m1 0h3m1 0h1m1 0h1m1 0h1m2 0h1m4 0h2M1 12.5h1m1 0h1m5 0h1m1 0h1m1 0h3m1 0h1m1 0h4m6 0h1M7 13.5h1m1 0h2m1 0h2m4 0h1m2 0h1m4 0h2M3 14.5h2m1 0h1m2 0h1m2 0h1m1 0h1m1 0h5m2 0h1m3 0h3M1 15.5h1m3 0h3m1 0h1m1 0h1m1 0h1m1 0h1m4 0h1m4 0h1m1 0h3M1 16.5h2m3 0h1m2 0h3m2 0h1m4 0h1m3 0h1m4 0h1M1 17.5h2m4 0h3m1 0h2m4 0h1m1 0h3m2 0h3m1 0h1M4 18.5h1m1 0h1m4 0h1m1 0h2m1 0h1m1 0h1m2 0h1m2 0h1m1 0h3M1 19.5h1m2 0h7m2 0h1m2 0h3m4 0h3m1 0h1M3 20.5h1m2 0h1m1 0h2m3 0h1m3 0h3m3 0h3m1 0h1M2 21.5h2m3 0h1m2 0h3m1 0h1m1 0h12M9 22.5h1m4 0h2m3 0h3m3 0h5M1 23.5h7m1 0h1m1 0h1m2 0h1m2 0h5m1 0h1m1 0h2m1 0h1M1 24.5h1m5 0h1m1 0h1m1 0h3m7 0h1m3 0h2m1 0h2M1 25.5h1m1 0h3m1 0h1m2 0h3m2 0h1m2 0h1m2 0h5m1 0h1M1 26.5h1m1 0h3m1 0h1m1 0h1m2 0h1m1 0h4m2 0h3m1 0h3m2 0h1M1 27.5h1m1 0h3m1 0h1m1 0h2m3 0h2m4 0h2m2 0h1m2 0h1m1 0h1M1 28.5h1m5 0h1m5 0h5m3 0h1m3 0h2m1 0h1M1 29.5h7m1 0h3m5 0h1m1 0h5m2 0h1m1 0h1"/></svg>
+    <div>
+      <p class="scan">Scannez,<br><em>et à vous de jouer.</em></p>
+      <p class="url">tijawk.github.io/podium-site</p>
+      <span class="soon">Bientôt sur Google Play</span>
+    </div>
+  </div>
+  <p class="motto">Par les joueurs, pour les joueurs.</p>
+</div>
+</body>
+</html>
