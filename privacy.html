@@ -9,10 +9,10 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
-  :root { --ink: #2B2622; --paper: #F6F1E7; --card: #FFFFFF; --gold: #E9B44C; --rust: #B5452E; --muted: #766B60; --line: #E6DDCC; --cream: #FFF8EC; --cream-muted: #CDBFA9; color-scheme: light; }
-  @media (prefers-color-scheme: dark) { :root { --paper: #1C1916; --card: #26221E; --muted: #B3A792; --line: #3A342D; --rust: #E9B44C; color-scheme: dark; } body { color: var(--cream); } }
+  :root { --text: #2B2622; --ink: #2B2622; --paper: #F6F1E7; --card: #FFFFFF; --gold: #E9B44C; --rust: #B5452E; --muted: #766B60; --line: #E6DDCC; --cream: #FFF8EC; --cream-muted: #CDBFA9; color-scheme: light; }
+  @media (prefers-color-scheme: dark) { :root { --text: #FFF8EC; --paper: #1C1916; --card: #26221E; --muted: #B3A792; --line: #3A342D; --rust: #E9B44C; color-scheme: dark; } }
   * { box-sizing: border-box; }
-  body { margin: 0; background: var(--paper); color: var(--ink); font: 17px/1.65 'DM Sans', system-ui, sans-serif; }
+  body { margin: 0; background: var(--paper); color: var(--text); font: 17px/1.65 'DM Sans', system-ui, sans-serif; }
   header { background: var(--ink); color: var(--cream); }
   .wrap { max-width: 760px; margin: 0 auto; padding-inline: 20px; }
   nav { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 22px; }

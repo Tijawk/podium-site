@@ -12,16 +12,15 @@
 <style>
   :root {
     --ink: #2B2622; --paper: #F6F1E7; --card: #FFFFFF; --gold: #E9B44C; --rust: #B5452E;
-    --muted: #72685D; --line: #E6DDCC; --cream: #FFF8EC; --cream-muted: #CDBFA9;
+    --text: #2B2622; --muted: #72685D; --line: #E6DDCC; --cream: #FFF8EC; --cream-muted: #CDBFA9;
     --blue: #86AEE0; --green: #6DBE9E; --orange: #F0A868; --pink: #E58FB5;
     color-scheme: light;
   }
   @media (prefers-color-scheme: dark) {
-    :root { --paper: #1C1916; --card: #26221E; --muted: #B3A792; --line: #3A342D; color-scheme: dark; }
-    body { color: var(--cream); }
+    :root { --text: #FFF8EC; --paper: #1C1916; --card: #26221E; --muted: #B3A792; --line: #3A342D; color-scheme: dark; }
   }
   * { box-sizing: border-box; }
-  body { margin: 0; background: var(--paper); color: var(--ink); font: 17px/1.6 'DM Sans', system-ui, sans-serif; }
+  body { margin: 0; background: var(--paper); color: var(--text); font: 17px/1.6 'DM Sans', system-ui, sans-serif; }
   a { color: inherit; }
   .wrap { max-width: 1080px; margin: 0 auto; padding-inline: 20px; }
 
@@ -156,7 +155,7 @@
     <h2 data-t="featuresTitle">Tout ce qu'il faut autour de la table</h2>
     <p class="intro" data-t="featuresIntro">Pensé par des joueurs, pour des soirées où l'on veut jouer, pas faire des additions.</p>
     <div class="features">
-      <article class="feature"><h3><span class="num">57</span> <span data-t="f1t">jeux prêts à jouer</span></h3><p data-t="f1">Règles déjà réglées et fiche « comment compter les points » pour chaque jeu du catalogue.</p></article>
+      <article class="feature"><h3><span class="num">57</span> <span data-t="f1t">jeux prêts à jouer</span></h3><p data-t="f1">Chaque jeu arrive avec ses règles de score et une fiche qui explique comment compter les points.</p></article>
       <article class="feature"><h3><span class="num">3</span> <span data-t="f2t">calculateurs de cartes</span></h3><p data-t="f2">Tarot, Belote et Coinche, variantes régionales comprises : saisissez la donne, Podium calcule.</p></article>
       <article class="feature"><h3><span class="num">2+</span> <span data-t="f3t">en équipes aussi</span></h3><p data-t="f3">Composez les équipes, et le donneur tourne tout seul d'un tour à l'autre.</p></article>
       <article class="feature"><h3><span class="num">1</span> <span data-t="f4t">tour en quelques secondes</span></h3><p data-t="f4">Raccourcis +1 / +5 / +10, dernier score déduit quand le total est fixe, fin de partie annoncée.</p></article>
@@ -193,7 +192,7 @@
     mockRound: 'Round 4 · target 100', mockPlayers: 'Players', mockNext: '+ Round 5',
     featuresTitle: 'Everything the table needs',
     featuresIntro: 'Made by players, for nights where you want to play, not do sums.',
-    f1t: 'games ready to play', f1: 'Rules already set and a “how to count the points” guide for every game in the catalogue.',
+    f1t: 'games ready to play', f1: 'Every game comes with its scoring rules and a guide that explains how to count the points.',
     f2t: 'card-game calculators', f2: 'French Tarot, Belote and Coinche, regional variants included: enter the deal, Podium does the maths.',
     f3t: 'teams too', f3: 'Split the players into teams, and the dealer moves on by itself every round.',
     f4t: 'round in seconds', f4: '+1 / +5 / +10 shortcuts, the last score worked out when rounds have a fixed total, the end of the game announced.',
